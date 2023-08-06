@@ -83,20 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ),
-      body: Center(
-        child: SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            child: Container(
-                color: Colors.transparent,
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height,
-                child: SizedBox(
-                  width: 45,
-                  height: 45,
-                  child: CustomCardView(
-                      title: 'Math', image: 'assets/images/p3.jpg'),
-                ))),
-      ),
+      body: Categories(),
     );
   }
 }

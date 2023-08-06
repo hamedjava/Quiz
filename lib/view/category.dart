@@ -11,19 +11,33 @@ class Categories extends StatefulWidget {
 class _CategoriesState extends State<Categories> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Colors.transparent,
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            CustomCardView(
-              title: 'Math',
-              image: 'assets/images/p3.jpg',
-            )
-          ],
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: CustomCardView(
+                  onPressed: () {},
+                  title: 'Math',
+                  image: 'assets/images/p3.jpg',
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: CustomCardView(
+                  onPressed: () {},
+                  title: 'Math',
+                  image: 'assets/images/p3.jpg',
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
