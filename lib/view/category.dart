@@ -16,27 +16,75 @@ class _CategoriesState extends State<Categories> {
       body: Center(
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: CustomCardView(
-                  onPressed: () {},
-                  title: 'Math',
-                  image: 'assets/images/p3.jpg',
+          child: SizedBox(
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
+            child: GridView(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2, crossAxisSpacing: 30),
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: CustomCardView(
+                    onPressed: () {},
+                    title: 'Math',
+                    subTitle: 'question',
+                    titleCount: '50',
+                    image: 'assets/images/sport.png',
+                  ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: CustomCardView(
-                  onPressed: () {},
-                  title: 'Math',
-                  image: 'assets/images/p3.jpg',
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: CustomCardView(
+                    onPressed: () {},
+                    title: 'Math',
+                    subTitle: 'question',
+                    titleCount: '50',
+                    image: 'assets/images/chemistry.png',
+                  ),
                 ),
-              ),
-            ],
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: CustomCardView(
+                    onPressed: () {},
+                    title: 'Math',
+                    subTitle: 'question',
+                    titleCount: '50',
+                    image: 'assets/images/map.png',
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: CustomCardView(
+                    onPressed: () {},
+                    title: 'Math',
+                    subTitle: 'question',
+                    titleCount: '50',
+                    image: 'assets/images/math.png',
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: CustomCardView(
+                    onPressed: () {},
+                    title: 'Math',
+                    subTitle: 'question',
+                    titleCount: '50',
+                    image: 'assets/images/documentary.png',
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: CustomCardView(
+                    onPressed: () {},
+                    title: 'Math',
+                    subTitle: 'question',
+                    titleCount: '50',
+                    image: 'assets/images/sport.png',
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

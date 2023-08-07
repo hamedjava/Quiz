@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_hive/view/category.dart';
-import 'package:quiz_hive/view/components/custom_card.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -64,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Icons.home,
                   color: Colors.red,
                 ),
-                title: const Text('Page 1'),
+                title: const Text('Setting'),
                 onTap: () {
                   Navigator.pop(context);
                 },
@@ -74,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Icons.train,
                   color: Colors.red,
                 ),
-                title: const Text('Page 2'),
+                title: const Text('Profile'),
                 onTap: () {
                   Navigator.pop(context);
                 },

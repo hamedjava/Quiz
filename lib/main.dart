@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:quiz_hive/routes/myroutes.dart';
-import 'package:quiz_hive/view/signup.dart';
-import 'package:quiz_hive/view/splash.dart';
+import 'package:quiz_hive/view/home_page.dart';
 
 void main() async {
   await Hive.initFlutter();
@@ -20,7 +19,9 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       routes: MyRoutes.routes,
-      home: const Signup(),
+      home: const MyHomePage(
+        title: 'Welcome',
+      ),
     );
   }
 }
