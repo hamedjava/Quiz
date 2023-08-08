@@ -42,36 +42,36 @@ class _CustomCardViewState extends State<CustomCardView> {
                   ),
                 ),
               ),
-              Positioned(
-                bottom: 20,
-                left: MediaQuery.of(context).size.width / 5.7,
-                child: Padding(
-                  padding: const EdgeInsets.all(4.0),
-                  child: Text(
-                    widget.title,
-                    style: const TextStyle(color: Colors.black),
-                  ),
-                ),
-              ),
               Align(
                 alignment: Alignment.bottomCenter,
                 child: Padding(
                   padding: const EdgeInsets.all(4.0),
-                  child: Row(
+                  child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisSize: MainAxisSize.max,
+                    mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
-                        widget.subTitle,
-                        style: const TextStyle(color: Colors.black54),
+                        widget.title,
+                        style: const TextStyle(color: Colors.black),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(right: 4.0),
-                        child: Text(
-                          widget.titleCount,
-                          style: const TextStyle(color: Colors.black54),
-                        ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(3.0),
+                            child: Text(
+                              widget.titleCount,
+                              style: const TextStyle(color: Colors.black54),
+                            ),
+                          ),
+                          Text(
+                            widget.subTitle,
+                            style: const TextStyle(color: Colors.black54),
+                          ),
+                        ],
                       ),
                     ],
                   ),

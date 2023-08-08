@@ -21,11 +21,9 @@ class CustomTextFieldUsername extends StatefulWidget {
 class _CustomTextFieldUsernameState extends State<CustomTextFieldUsername> {
   @override
   Widget build(BuildContext context) {
-    //double width = MediaQuery.of(context).size.width;
     return Container(
       color: Colors.transparent,
       width: widget.width,
-      height: widget.height,
       child: Column(
         children: [
           Padding(

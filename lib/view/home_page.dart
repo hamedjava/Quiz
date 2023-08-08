@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_hive/view/category.dart';
+import 'package:quiz_hive/routes/myroutes.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -22,7 +23,9 @@ class _MyHomePageState extends State<MyHomePage> {
           height: 42,
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(50)),
           child: RawMaterialButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, MyRoutes.profile);
+            },
             child: const CircleAvatar(
               backgroundImage: NetworkImage('assets/images/p3.jpg'),
             ),
@@ -82,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ),
-      body: Categories(),
+      body: const Categories(),
     );
   }
 }

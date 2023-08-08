@@ -20,6 +20,15 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[900],
+      appBar: AppBar(
+        elevation: 0,
+        centerTitle: true,
+        title: const Text(
+          'Login',
+          style: TextStyle(color: Colors.white),
+        ),
+        backgroundColor: Colors.transparent,
+      ),
       body: Center(
         child: Form(
             key: _fromKey,
@@ -29,21 +38,40 @@ class _LoginState extends State<Login> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
+                  padding: const EdgeInsets.only(top: 16.0, bottom: 30),
+                  child: Container(
+                    color: Colors.transparent,
+                    width: 150,
+                    height: 150,
+                    child: Image.network(
+                      'assets/images/login.png',
+                      width: 150,
+                      height: 150,
+                    ),
+                  ),
+                ),
+                Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: CustomTextFieldUsername(
-                      hint: "Username", controller: usernameController),
+                      width: MediaQuery.of(context).size.width / 1.6,
+                      height: 42,
+                      label: "Username",
+                      controller: usernameController),
                 ),
                 Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: CustomTextFieldPassword(
-                        hint: "Password", controller: passwordController)),
+                        width: MediaQuery.of(context).size.width / 1.6,
+                        height: 42,
+                        label: "Password",
+                        controller: passwordController)),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: CustomButton(
                       title: "Submit",
                       onPressed: () {
                         if (_fromKey.currentState!.validate()) {
-                          Navigator.pushNamed(context, MyRoutes.category);
+                          Navigator.pushNamed(context, MyRoutes.home);
                         } else {
                           return "please fill all fields";
                         }

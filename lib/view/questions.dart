@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class Questions extends StatefulWidget {
-  const Questions({super.key});
+  const Questions({
+    super.key,
+  });
 
   @override
   State<Questions> createState() => _QuestionsState();
@@ -10,6 +12,16 @@ class Questions extends StatefulWidget {
 class _QuestionsState extends State<Questions> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold(
+      backgroundColor: Colors.black87,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisSize: MainAxisSize.max,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [],
+        ),
+      ),
+    );
   }
 }

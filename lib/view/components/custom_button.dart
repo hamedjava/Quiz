@@ -19,7 +19,7 @@ class _CustomButtonState extends State<CustomButton> {
         color: Colors.blueAccent,
         borderRadius: BorderRadius.all(Radius.circular(8)),
       ),
-      width: width / 1.5,
+      width: width / 2,
       height: 42,
       child: RawMaterialButton(
         onPressed: widget.onPressed,
