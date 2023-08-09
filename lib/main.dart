@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:quiz_hive/routes/myroutes.dart';
-import 'package:quiz_hive/view/home_page.dart';
 import 'package:quiz_hive/view/login.dart';
+import 'package:quiz_hive/view/profile.dart';
 
 void main() async {
   await Hive.initFlutter();
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       routes: MyRoutes.routes,
-      home: const Login(),
+      home: const Profile(),
     );
   }
 }

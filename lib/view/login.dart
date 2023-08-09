@@ -23,9 +23,19 @@ class _LoginState extends State<Login> {
       appBar: AppBar(
         elevation: 0,
         centerTitle: true,
-        title: const Text(
-          'Login',
-          style: TextStyle(color: Colors.white),
+        title: const Padding(
+          padding: EdgeInsets.only(top: 8.0),
+          child: Text(
+            'Login',
+            style: TextStyle(color: Colors.white),
+          ),
+        ),
+        leading: const Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Text(
+            'Quiz',
+            style: TextStyle(color: Colors.white, fontSize: 20),
+          ),
         ),
         backgroundColor: Colors.transparent,
       ),
