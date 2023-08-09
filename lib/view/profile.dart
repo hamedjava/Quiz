@@ -17,8 +17,8 @@ class _ProfileState extends State<Profile> {
         children: [
           Positioned(
             top: 10,
-            left: MediaQuery.of(context).size.width * 0.04,
-            right: MediaQuery.of(context).size.width * 0.04,
+            left: MediaQuery.of(context).size.width * 0.02,
+            right: MediaQuery.of(context).size.width * 0.02,
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(50),
@@ -156,7 +156,7 @@ class _ProfileState extends State<Profile> {
                   ),
                 ],
               ),
-              width: MediaQuery.of(context).size.width / 1.4,
+              width: MediaQuery.of(context).size.width / 1.2,
               height: MediaQuery.of(context).size.height / 4,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -303,3 +303,143 @@ class _ProfileState extends State<Profile> {
     );
   }
 }
+/*
+Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Column(
+                        children: [
+                          Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: SizedBox(
+                                  width: 10,
+                                  height: 10,
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(300.0),
+                                    child: Container(
+                                      color: Colors.purple,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              const Text(
+                                '100 %',
+                                style: TextStyle(
+                                  color: Colors.purple,
+                                ),
+                              ),
+                            ],
+                          ),
+                          const Text(
+                            'Completation',
+                            style: TextStyle(
+                              color: Colors.black87,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: SizedBox(
+                                  width: 10,
+                                  height: 10,
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(300.0),
+                                    child: Container(
+                                      color: Colors.purple,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              const Text(
+                                '20',
+                                style: TextStyle(color: Colors.purple),
+                              ),
+                            ],
+                          ),
+                          const Text('total question'),
+                        ],
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Column(
+                        children: [
+                          Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: SizedBox(
+                                  width: 10,
+                                  height: 10,
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(300.0),
+                                    child: Container(
+                                      color: Colors.blue,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              const Text(
+                                '13',
+                                style: TextStyle(color: Colors.blue),
+                              ),
+                            ],
+                          ),
+                          const Text(
+                            'Correct',
+                            style: TextStyle(color: Colors.black87),
+                          ),
+                        ],
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: SizedBox(
+                                  width: 10,
+                                  height: 10,
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(300.0),
+                                    child: Container(
+                                      color: Colors.red,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              const Text(
+                                '07',
+                                style: TextStyle(color: Colors.red),
+                              ),
+                            ],
+                          ),
+                          const Text(
+                            'Wrong',
+                            style: TextStyle(color: Colors.black87),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+*/
