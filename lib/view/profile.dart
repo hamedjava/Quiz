@@ -164,7 +164,6 @@ class _ProfileState extends State<Profile> {
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    mainAxisSize: MainAxisSize.max,
                     children: [
                       Column(
                         children: [
@@ -229,7 +228,6 @@ class _ProfileState extends State<Profile> {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    mainAxisSize: MainAxisSize.max,
                     children: [
                       Column(
                         children: [
