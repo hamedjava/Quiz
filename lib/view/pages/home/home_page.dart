@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_hive/view/category.dart';
+import 'package:quiz_hive/view/pages/category/category.dart';
 import 'package:quiz_hive/routes/myroutes.dart';
 
 class MyHomePage extends StatefulWidget {

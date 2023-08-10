@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_hive/view/category.dart';
-import 'package:quiz_hive/view/home_page.dart';
-import 'package:quiz_hive/view/login.dart';
-import 'package:quiz_hive/view/profile.dart';
-import 'package:quiz_hive/view/questions.dart';
-import 'package:quiz_hive/view/signup.dart';
+import 'package:quiz_hive/view/pages/auth/login.dart';
+import 'package:quiz_hive/view/pages/auth/signup.dart';
+import 'package:quiz_hive/view/pages/category/category.dart';
+import 'package:quiz_hive/view/pages/home/home_page.dart';
+import 'package:quiz_hive/view/pages/profiles/profile.dart';
+import 'package:quiz_hive/view/pages/question/questions.dart';
 
 class MyRoutes {
   static const String home = '/home_page';
