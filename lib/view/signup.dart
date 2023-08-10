@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_hive/routes/myroutes.dart';
-import 'package:quiz_hive/view/components/custom_button.dart';
+import 'package:quiz_hive/view/components/profile_button.dart';
 import 'package:quiz_hive/view/components/custom_textformfield_pass.dart';
 import 'package:quiz_hive/view/components/custom_textformfield_username.dart';
 

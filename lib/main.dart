@@ -1,6 +1,8 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:quiz_hive/routes/myroutes.dart';
+import 'package:quiz_hive/view/category.dart';
 import 'package:quiz_hive/view/login.dart';
 import 'package:quiz_hive/view/profile.dart';
 
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       routes: MyRoutes.routes,
-      home: const Profile(),
+      home: Profile(),
     );
   }
 }
