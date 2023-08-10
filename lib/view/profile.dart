@@ -225,21 +225,24 @@ class _ProfileState extends State<Profile> {
                                               borderRadius:
                                                   BorderRadius.circular(300.0),
                                               child: Container(
-                                                color: Colors.purple,
+                                                color: Colors.blue,
                                               ),
                                             ),
                                           ),
                                         ),
                                         Text(
                                           '13',
-                                          style: TextStyle(fontSize: 20),
+                                          style: TextStyle(
+                                              fontSize: 20, color: Colors.blue),
                                         ),
                                       ],
                                     ),
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.only(left: 12.0),
-                                    child: Text('Correct'),
+                                    child: Text(
+                                      'Correct',
+                                    ),
                                   ),
                                 ],
                               ),
@@ -310,14 +313,15 @@ class _ProfileState extends State<Profile> {
                                             borderRadius:
                                                 BorderRadius.circular(300.0),
                                             child: Container(
-                                              color: Colors.purple,
+                                              color: Colors.red,
                                             ),
                                           ),
                                         ),
                                       ),
                                       Text(
                                         '07',
-                                        style: TextStyle(fontSize: 20),
+                                        style: TextStyle(
+                                            fontSize: 20, color: Colors.red),
                                       ),
                                     ],
                                   ),
