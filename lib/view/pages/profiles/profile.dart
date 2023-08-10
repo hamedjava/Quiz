@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hive_flutter/adapters.dart';
-import 'package:quiz_hive/view/components/custom_empty_card_view.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
