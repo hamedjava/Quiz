@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_hive/view/pages/score/custom_stage.dart';
+import 'package:quiz_hive/view/pages/score/custom_stage1.dart';
+import 'package:quiz_hive/view/pages/score/custom_stage2.dart';
+import 'package:quiz_hive/view/pages/score/custom_stage3.dart';
 
 class Scores extends StatefulWidget {
   const Scores({super.key});
@@ -27,16 +29,18 @@ class _ScoresState extends State<Scores> {
         clipBehavior: Clip.none,
         children: [
           Positioned(
-            top: 10,
+            top: 15,
             left: MediaQuery.of(context).size.width * 0.02,
             right: MediaQuery.of(context).size.width * 0.02,
             child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50),
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(50),
+                    topRight: Radius.circular(50)),
                 color: Colors.purple,
               ),
               width: MediaQuery.of(context).size.width / 1.3,
-              height: MediaQuery.of(context).size.height / 2.2,
+              height: MediaQuery.of(context).size.height / 1.8,
             ),
           ),
           Positioned(
@@ -94,41 +98,81 @@ class _ScoresState extends State<Scores> {
             ),
           ),
           Positioned(
-            top: MediaQuery.of(context).size.height * 0.150,
-            right: MediaQuery.of(context).size.width * 0.02,
-            child: ClipPath(
-              child: Container(
-                width: MediaQuery.of(context).size.width / 2,
-                height: 205,
-                color: Colors.red.withOpacity(0.6),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 52.0, left: 30),
-                  child: Text(
-                    '1',
-                    style: TextStyle(color: Colors.white, fontSize: 120),
+            top: MediaQuery.of(context).size.height * 0.190,
+            left: MediaQuery.of(context).size.width / 3.5,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                ClipPath(
+                  clipper: CustomStage2(),
+                  child: Container(
+                    height: 210,
+                    decoration: const BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(blurStyle: BlurStyle.inner, blurRadius: 55)
+                      ],
+                    ),
+                    child: const Padding(
+                      padding: EdgeInsets.only(top: 80.0, left: 20),
+                      child: Text(
+                        '2',
+                        style: TextStyle(color: Colors.white, fontSize: 90),
+                      ),
+                    ),
                   ),
                 ),
-              ),
-              clipper: CustomStage(),
-            ),
-          ),
-          Positioned(
-            top: MediaQuery.of(context).size.height * 0.150,
-            right: MediaQuery.of(context).size.width * 0.09,
-            child: ClipPath(
-              child: Container(
-                width: MediaQuery.of(context).size.width / 2,
-                height: 205,
-                color: Colors.red.withOpacity(0.6),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 52.0, left: 30),
-                  child: Text(
-                    '1',
-                    style: TextStyle(color: Colors.white, fontSize: 120),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    const CircleAvatar(
+                      backgroundImage: NetworkImage('assets/images/p3.jpg'),
+                    ),
+                    ClipPath(
+                      clipper: CustomStage1(),
+                      child: Container(
+                        height: 250,
+                        decoration: const BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                                blurStyle: BlurStyle.inner, blurRadius: 100)
+                          ],
+                        ),
+                        child: const Padding(
+                          padding: EdgeInsets.only(top: 52.0, left: 6),
+                          child: Text(
+                            '1',
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 130),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                ClipPath(
+                  clipper: CustomStage3(),
+                  child: Container(
+                    height: 210,
+                    width: MediaQuery.of(context).size.width,
+                    decoration: const BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(blurStyle: BlurStyle.inner, blurRadius: 100)
+                      ],
+                    ),
+                    child: const Padding(
+                      padding: EdgeInsets.only(top: 110.0, left: 10),
+                      child: Text(
+                        '3',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 70,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
                   ),
                 ),
-              ),
-              clipper: CustomStage(),
+              ],
             ),
           ),
         ],
