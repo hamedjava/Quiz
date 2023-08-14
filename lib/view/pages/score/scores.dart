@@ -71,67 +71,84 @@ class _ScoresState extends State<Scores> {
             ),
           ),
           Positioned(
-            left: MediaQuery.of(context).size.width * 0.1,
-            top: MediaQuery.of(context).size.height / 7,
-            child: const Text(
-              'Today',
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 26,
-                  fontWeight: FontWeight.bold),
-            ),
-          ),
-          Positioned(
-            left: MediaQuery.of(context).size.width * 0.3,
-            top: MediaQuery.of(context).size.height / 6.4,
-            child: const Text(
-              'mounth',
-              style: TextStyle(color: Colors.white, fontSize: 16),
-            ),
-          ),
-          Positioned(
-            left: MediaQuery.of(context).size.width * 0.5,
-            top: MediaQuery.of(context).size.height / 6.4,
-            child: const Text(
-              'All Time',
-              style: TextStyle(color: Colors.white, fontSize: 16),
-            ),
-          ),
-          Positioned(
-            top: MediaQuery.of(context).size.height * 0.190,
-            left: MediaQuery.of(context).size.width / 3.5,
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                ClipPath(
-                  clipper: CustomStage2(),
-                  child: Container(
-                    height: 210,
-                    decoration: const BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(blurStyle: BlurStyle.inner, blurRadius: 55)
-                      ],
+            top: MediaQuery.of(context).size.height / 9,
+            width: MediaQuery.of(context).size.width,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 25.0),
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width,
+                height: 42,
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Text(
+                      'Today',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 26,
+                          fontWeight: FontWeight.bold),
                     ),
-                    child: const Padding(
-                      padding: EdgeInsets.only(top: 80.0, left: 20),
-                      child: Text(
-                        '2',
-                        style: TextStyle(color: Colors.white, fontSize: 90),
+                    Text(
+                      'Mountly',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      'All Times',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+              ),
+            ), //menu
+          ),
+          Positioned(
+            top: MediaQuery.of(context).size.height * 0.200,
+            left: MediaQuery.of(context).size.width / 3,
+            child: Row(
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CircleAvatar(
+                      backgroundImage: NetworkImage('assets/images/p3.jpg'),
+                    ),
+                    ClipPath(
+                      clipper: CustomStage2(),
+                      child: Container(
+                        height: 205,
+                        decoration: const BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                                blurStyle: BlurStyle.inner, blurRadius: 55)
+                          ],
+                        ),
+                        child: const Padding(
+                          padding: EdgeInsets.only(top: 80.0, left: 20),
+                          child: Text(
+                            '2',
+                            style: TextStyle(color: Colors.white, fontSize: 90),
+                          ),
+                        ),
                       ),
                     ),
-                  ),
+                  ],
                 ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const CircleAvatar(
+                    CircleAvatar(
                       backgroundImage: NetworkImage('assets/images/p3.jpg'),
                     ),
                     ClipPath(
                       clipper: CustomStage1(),
                       child: Container(
-                        height: 250,
+                        height: 205,
                         decoration: const BoxDecoration(
                           boxShadow: [
                             BoxShadow(
@@ -150,27 +167,36 @@ class _ScoresState extends State<Scores> {
                     ),
                   ],
                 ),
-                ClipPath(
-                  clipper: CustomStage3(),
-                  child: Container(
-                    height: 210,
-                    width: MediaQuery.of(context).size.width,
-                    decoration: const BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(blurStyle: BlurStyle.inner, blurRadius: 100)
-                      ],
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    CircleAvatar(
+                      backgroundImage: NetworkImage('assets/images/p3.jpg'),
                     ),
-                    child: const Padding(
-                      padding: EdgeInsets.only(top: 110.0, left: 10),
-                      child: Text(
-                        '3',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 70,
-                            fontWeight: FontWeight.bold),
+                    ClipPath(
+                      clipper: CustomStage3(),
+                      child: Container(
+                        height: 205,
+                        width: MediaQuery.of(context).size.width,
+                        decoration: const BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                                blurStyle: BlurStyle.inner, blurRadius: 100)
+                          ],
+                        ),
+                        child: const Padding(
+                          padding: EdgeInsets.only(top: 110.0, left: 10),
+                          child: Text(
+                            '3',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 70,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
                       ),
                     ),
-                  ),
+                  ],
                 ),
               ],
             ),
