@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_hive/view/components/player_card/others_player.dart';
+import 'package:quiz_hive/view/components/player_card/self_player.dart';
 import 'package:quiz_hive/view/pages/score/custom_stage1.dart';
 import 'package:quiz_hive/view/pages/score/custom_stage2.dart';
 import 'package:quiz_hive/view/pages/score/custom_stage3.dart';
@@ -14,72 +16,50 @@ class _ScoresState extends State<Scores> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomSheet: Container(
-        decoration: const BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.only(
-            topRight: Radius.circular(35),
-            topLeft: Radius.circular(35),
-          ),
-        ),
-        width: double.infinity,
-        height: 250,
-      ),
-      body: Stack(
-        clipBehavior: Clip.none,
-        children: [
-          Positioned(
-            top: 15,
-            left: MediaQuery.of(context).size.width * 0.02,
-            right: MediaQuery.of(context).size.width * 0.02,
-            child: Container(
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(50),
-                    topRight: Radius.circular(50)),
-                color: Colors.purple,
-              ),
-              width: MediaQuery.of(context).size.width / 1.3,
-              height: MediaQuery.of(context).size.height / 1.8,
+      body: Center(
+        child: Container(
+          width: MediaQuery.of(context).size.width / 0.9,
+          height: MediaQuery.of(context).size.height,
+          decoration: const BoxDecoration(
+            color: Colors.purple,
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(35),
+              topRight: Radius.circular(35),
             ),
           ),
-          Positioned(
-            right: MediaQuery.of(context).size.width * 0.8,
-            top: MediaQuery.of(context).size.height * 0.05,
-            child: IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.arrow_back,
-                color: Colors.white,
-              ),
-            ),
-          ),
-          Positioned(
-            left: MediaQuery.of(context).size.width * 0.8,
-            top: MediaQuery.of(context).size.height * 0.05,
-            child: Container(
-              width: 42,
-              height: 42,
-              decoration:
-                  BoxDecoration(borderRadius: BorderRadius.circular(50)),
-              child: RawMaterialButton(
-                onPressed: () {},
-                child: const CircleAvatar(
-                  backgroundImage: NetworkImage('assets/images/p3.jpg'),
+          child: Stack(
+            alignment: Alignment.topCenter,
+            children: [
+              Positioned(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.arrow_back,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.all(12.0),
+                      child: CircleAvatar(
+                        backgroundImage: NetworkImage('assets/images/p3.jpg'),
+                      ),
+                    ),
+                  ],
                 ),
               ),
-            ),
-          ),
-          Positioned(
-            top: MediaQuery.of(context).size.height / 9,
-            width: MediaQuery.of(context).size.width,
-            child: Padding(
-              padding: const EdgeInsets.only(left: 25.0),
-              child: SizedBox(
+              Positioned(
+                top: 58,
                 width: MediaQuery.of(context).size.width,
-                height: 42,
                 child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisSize: MainAxisSize.max,
                   children: [
                     Text(
                       'Today',
@@ -105,19 +85,59 @@ class _ScoresState extends State<Scores> {
                   ],
                 ),
               ),
-            ), //menu
-          ),
-          Positioned(
-            top: MediaQuery.of(context).size.height * 0.200,
-            left: MediaQuery.of(context).size.width / 3,
-            child: Row(
-              children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+              Positioned(
+                top: 175,
+                left: 180,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     CircleAvatar(
                       backgroundImage: NetworkImage('assets/images/p3.jpg'),
                     ),
+                    Text(
+                      'Hamed',
+                      style: TextStyle(color: Colors.white, fontSize: 16),
+                    ),
+                  ],
+                ),
+              ),
+              Positioned(
+                top: 145,
+                left: 260,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    CircleAvatar(
+                      backgroundImage: NetworkImage('assets/images/p3.jpg'),
+                    ),
+                    Text(
+                      'Hamed',
+                      style: TextStyle(color: Colors.white, fontSize: 16),
+                    ),
+                  ],
+                ),
+              ),
+              Positioned(
+                top: 195,
+                left: 330,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    CircleAvatar(
+                      backgroundImage: NetworkImage('assets/images/p3.jpg'),
+                    ),
+                    Text(
+                      'Hamed',
+                      style: TextStyle(color: Colors.white, fontSize: 16),
+                    ),
+                  ],
+                ),
+              ),
+              Positioned(
+                top: MediaQuery.of(context).size.height * 0.250,
+                left: MediaQuery.of(context).size.width / 3,
+                child: Row(
+                  children: [
                     ClipPath(
                       clipper: CustomStage2(),
                       child: Container(
@@ -137,18 +157,10 @@ class _ScoresState extends State<Scores> {
                         ),
                       ),
                     ),
-                  ],
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    CircleAvatar(
-                      backgroundImage: NetworkImage('assets/images/p3.jpg'),
-                    ),
                     ClipPath(
                       clipper: CustomStage1(),
                       child: Container(
-                        height: 205,
+                        height: MediaQuery.of(context).size.height / 3,
                         decoration: const BoxDecoration(
                           boxShadow: [
                             BoxShadow(
@@ -164,14 +176,6 @@ class _ScoresState extends State<Scores> {
                           ),
                         ),
                       ),
-                    ),
-                  ],
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    CircleAvatar(
-                      backgroundImage: NetworkImage('assets/images/p3.jpg'),
                     ),
                     ClipPath(
                       clipper: CustomStage3(),
@@ -198,10 +202,40 @@ class _ScoresState extends State<Scores> {
                     ),
                   ],
                 ),
-              ],
-            ),
+              ),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Container(
+                  height: 270,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(35),
+                        topRight: Radius.circular(35),
+                      ),
+                      color: Colors.white),
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                      top: 18.0,
+                      right: 20,
+                      left: 20,
+                    ),
+                    child: SingleChildScrollView(
+                      child: ListView(children: [
+                        OthersPlayer(),
+                        OthersPlayer(),
+                        SelfPlayer(),
+                        OthersPlayer(),
+                        OthersPlayer(),
+                        OthersPlayer(),
+                      ], shrinkWrap: true),
+                    ),
+                  ),
+                ),
+              )
+            ],
           ),
-        ],
+        ),
       ),
     );
   }
