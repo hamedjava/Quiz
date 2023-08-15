@@ -221,14 +221,17 @@ class _ScoresState extends State<Scores> {
                       left: 20,
                     ),
                     child: SingleChildScrollView(
-                      child: ListView(children: [
-                        OthersPlayer(),
-                        OthersPlayer(),
-                        SelfPlayer(),
-                        OthersPlayer(),
-                        OthersPlayer(),
-                        OthersPlayer(),
-                      ], shrinkWrap: true),
+                      child: Padding(
+                        padding: const EdgeInsets.all(16),
+                        child: ListView(children: [
+                          OthersPlayer(),
+                          OthersPlayer(),
+                          SelfPlayer(),
+                          OthersPlayer(),
+                          OthersPlayer(),
+                          OthersPlayer(),
+                        ], shrinkWrap: true),
+                      ),
                     ),
                   ),
                 ),
