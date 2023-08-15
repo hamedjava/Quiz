@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:quiz_hive/view/components/player_card/others_player.dart';
 import 'package:quiz_hive/view/components/player_card/self_player.dart';
 import 'package:quiz_hive/view/pages/score/custom_stage1.dart';
@@ -87,7 +88,7 @@ class _ScoresState extends State<Scores> {
               ),
               Positioned(
                 top: 175,
-                left: 180,
+                left: (MediaQuery.sizeOf(context).width * 0.35),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -103,7 +104,7 @@ class _ScoresState extends State<Scores> {
               ),
               Positioned(
                 top: 145,
-                left: 260,
+                left: MediaQuery.of(context).size.width > 650 ? : ,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -119,8 +120,8 @@ class _ScoresState extends State<Scores> {
               ),
               Positioned(
                 top: 195,
-                left: 330,
-                child: Column(
+                left: (MediaQuery.sizeOf(context).width * 0.65),
+                child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     CircleAvatar(
