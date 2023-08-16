@@ -40,7 +40,7 @@ class _ScoresState extends State<Scores> {
                       padding: const EdgeInsets.all(12.0),
                       child: IconButton(
                         onPressed: () {},
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.arrow_back,
                           color: Colors.white,
                         ),
@@ -89,7 +89,7 @@ class _ScoresState extends State<Scores> {
               Positioned(
                 top: 175,
                 left: (MediaQuery.sizeOf(context).width * 0.35),
-                child: Column(
+                child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     CircleAvatar(
@@ -102,9 +102,9 @@ class _ScoresState extends State<Scores> {
                   ],
                 ),
               ),
-              Positioned(
+              const Positioned(
                 top: 145,
-                left: MediaQuery.of(context).size.width > 650 ? : ,
+                left: 185,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -224,19 +224,22 @@ class _ScoresState extends State<Scores> {
                     child: SingleChildScrollView(
                       child: Padding(
                         padding: const EdgeInsets.all(16),
-                        child: ListView(children: [
-                          OthersPlayer(),
-                          OthersPlayer(),
-                          SelfPlayer(),
-                          OthersPlayer(),
-                          OthersPlayer(),
-                          OthersPlayer(),
-                        ], shrinkWrap: true),
+                        child: ListView(
+                          shrinkWrap: true,
+                          children: const [
+                            OthersPlayer(),
+                            OthersPlayer(),
+                            SelfPlayer(),
+                            OthersPlayer(),
+                            OthersPlayer(),
+                            OthersPlayer(),
+                          ],
+                        ),
                       ),
                     ),
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),
